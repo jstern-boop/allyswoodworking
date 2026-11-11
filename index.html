@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ally's Woodworking | Shop (Google Sheet demo)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--walnut:#3b2a20;--walnut-2:#5a3e2b;--maple:#f3e7d3;--maple-2:#e9d8bc;--sapele:#8c4a2f;--purple:#6b3550;--ink:#2a1f18;--soft:#6e5a4a;--line:#dccbb0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Work Sans",system-ui,sans-serif;color:var(--ink);background:var(--maple);line-height:1.6}
+  .demo-bar{background:#1f2a44;color:#e8eefb;font-size:14px;padding:12px 20px;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:center}
+  .demo-bar a{color:#ffd166;font-weight:700}
+  .demo-bar .pill{background:#2e3d62;border-radius:999px;padding:4px 12px;font-size:13px}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--walnut)}
+  .seal{width:46px;height:46px;border-radius:50%;border:2px solid var(--walnut);display:grid;place-items:center;font-family:"Libre Caslon Text",serif;font-weight:700;font-size:18px}
+  .brand b{font-family:"Libre Caslon Text",serif;font-size:24px;letter-spacing:.3px}
+  .brand small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+  nav a{margin-left:24px;text-decoration:none;color:var(--soft);font-weight:600;font-size:15px}
+  nav a.on{color:var(--walnut);border-bottom:2px solid var(--sapele);padding-bottom:3px}
+  .intro{padding:54px 0 26px;display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
+  .eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--sapele);font-weight:700}
+  h1{font-family:"Libre Caslon Text",serif;font-size:clamp(36px,5vw,56px);line-height:1.08;color:var(--walnut);margin-top:8px}
+  .intro p{color:var(--soft);max-width:520px;margin-top:10px}
+  .filters{display:flex;gap:8px;flex-wrap:wrap}
+  .filters button{font:inherit;font-weight:600;font-size:14px;border:1.5px solid var(--line);background:#fbf4e8;color:var(--walnut);padding:8px 16px;border-radius:999px;cursor:pointer}
+  .filters button.on{background:var(--walnut);border-color:var(--walnut);color:var(--maple)}
+  .featured{margin:18px 0 34px}
+  .featured h2,.all h2{font-family:"Libre Caslon Text",serif;font-size:24px;color:var(--walnut);margin-bottom:16px}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .card{background:#fffaf2;border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;position:relative;box-shadow:0 1px 0 #fff inset,0 10px 24px #3b2a2010}
+  .photo{aspect-ratio:4/3;position:relative;overflow:hidden;background:var(--walnut-2)}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .grain{position:absolute;inset:0;display:grid;place-items:center;color:#f7ead6;font-family:"Libre Caslon Text",serif;font-size:22px;text-align:center;padding:20px;
+    background:repeating-linear-gradient(90deg,#4a3324 0 22px,#d9b98c 22px 34px,#5e2f45 34px 40px,#c99c68 40px 58px,#3b2a20 58px 74px)}
+  .grain span{background:#2a1f18cc;padding:8px 14px;border-radius:4px;font-size:17px}
+  .sold{position:absolute;top:16px;left:-36px;transform:rotate(-35deg);background:#8c2f2f;color:#fff;font-weight:700;font-size:13px;letter-spacing:.15em;padding:6px 44px}
+  .card.is-sold .photo img,.card.is-sold .grain{filter:grayscale(.6) brightness(.85)}
+  .body{padding:18px 20px 20px;flex:1;display:flex;flex-direction:column}
+  .cat{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sapele);font-weight:700}
+  .card h3{font-family:"Libre Caslon Text",serif;font-size:21px;color:var(--walnut);margin:4px 0 6px;line-height:1.25}
+  .woods{display:inline-block;font-size:13px;color:var(--walnut-2);background:var(--maple-2);border-radius:3px;padding:3px 8px;margin-bottom:8px}
+  .desc{color:var(--soft);font-size:15px;flex:1}
+  .meta{display:flex;justify-content:space-between;align-items:center;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+  .price{font-family:"Libre Caslon Text",serif;font-size:22px;color:var(--walnut)}
+  .size{font-size:13px;color:var(--soft)}
+  .ask{font:inherit;font-weight:700;font-size:14px;background:var(--walnut);color:var(--maple);border:0;border-radius:4px;padding:9px 14px;cursor:pointer;text-decoration:none}
+  .state{padding:30px;text-align:center;color:var(--soft);background:#fffaf2;border:1px dashed var(--line);border-radius:6px}
+  .how{background:#fffaf2;border:1px solid var(--line);border-radius:8px;padding:26px;margin:46px 0}
+  .how h2{font-family:"Libre Caslon Text",serif;color:var(--walnut);font-size:24px;margin-bottom:10px}
+  .how ol{padding-left:22px;color:var(--soft)} .how li{margin:6px 0}
+  .how code{background:var(--maple-2);padding:1px 6px;border-radius:3px;color:var(--walnut)}
+  footer{padding:30px 0 50px;text-align:center;color:var(--soft);font-size:14px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr 1fr}nav{display:none}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}.wrap{padding:0 16px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">
+  <span><b>Demo for Jason:</b> this shop reads the Google Sheet live.</span>
+  <a id="sheetLink" href="#" target="_blank" rel="noopener">Open the Sheet ↗</a>
+  <span class="pill" id="loaded">Loading…</span>
+  <span class="pill">Auto-refreshes every 15 seconds</span>
+</div>
+
+<div class="wrap">
+  <header>
+    <a class="brand" href="#"><span class="seal">AW</span><span><b>Ally's Woodworking</b><small>Handmade in West Babylon, NY</small></span></a>
+    <nav><a href="#">Home</a><a class="on" href="#">Shop</a><a href="#">Custom Orders</a></nav>
+  </header>
+
+  <div class="intro">
+    <div>
+      <div class="eyebrow">The shop</div>
+      <h1>Made by hand, one piece at a time.</h1>
+      <p>Every piece is cut, joined and finished in our West Babylon shop. When it's gone, it's gone, but we're always happy to make you one.</p>
+    </div>
+    <div class="filters" id="filters"></div>
+  </div>
+
+  <div class="featured" id="featuredWrap"><h2>Featured pieces</h2><div class="grid" id="featured"></div></div>
+  <div class="all"><h2>All pieces</h2><div class="grid" id="grid"><div class="state">Loading products from the Google Sheet…</div></div></div>
+
+  <div class="how">
+    <h2>Try it (demo instructions)</h2>
+    <ol>
+      <li>Click <b>Open the Sheet</b> at the top. It opens the demo Google Sheet in your Google account.</li>
+      <li><b>Mark something sold:</b> change a <code>Status</code> cell to <code>Sold</code>. A "SOLD" ribbon appears.</li>
+      <li><b>Hide something:</b> change <code>Status</code> to <code>Hidden</code>. It disappears from the shop.</li>
+      <li><b>Add a product:</b> fill in a new row. Leave <code>Photo</code> blank for a wood-grain placeholder, or paste a photo link.</li>
+      <li><b>Feature it:</b> type <code>Yes</code> in <code>Featured</code> to put it in the top row.</li>
+      <li>Come back here. The page refreshes itself every 15 seconds, or press F5.</li>
+    </ol>
+    <p style="color:var(--soft);margin-top:10px"><b>Photo links:</b> upload a photo to Google Drive, set it to "Anyone with the link can view," copy the link, and paste it into the Photo cell. Any public image link (ending in .jpg or .png) also works.</p>
+  </div>
+</div>
+<footer>Ally's Woodworking · West Babylon, NY · Demo by Island Pixel Studios</footer>
+
+<script>
+const SHEET_ID='1GtIs_KmIT7KahDWlA5FMHCi7_D6vvmEPM0FGtWPW_24';
+document.getElementById('sheetLink').href='https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/edit';
+let rows=[],cat='All',lastSig='';
+
+function parseCSV(t){const out=[];let row=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];
+  if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+  else if(c=='"')q=true;else if(c==','){row.push(f);f=''}else if(c=='\n'){row.push(f);out.push(row);row=[];f=''}else if(c!='\r')f+=c}
+  if(f||row.length){row.push(f);out.push(row)}return out}
+
+function photoURL(v){v=(v||'').trim();if(!v)return'';
+  const m=v.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]{20,})/);
+  return m?'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w1200':v}
+
+const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function card(p){
+  const sold=/^sold$/i.test(p.Status), img=photoURL(p.Photo);
+  const price=p.Price&&!isNaN(+String(p.Price).replace(/[$,]/g,''))?'$'+(+String(p.Price).replace(/[$,]/g,'')).toLocaleString():esc(p.Price);
+  return `<article class="card${sold?' is-sold':''}"><div class="photo">${img?`<img src="${esc(img)}" alt="${esc(p.Name)}" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'grain',innerHTML:'<span>Photo link not public yet</span>'}))">`:`<div class="grain"><span>${esc(p.Name)}</span></div>`}${sold?'<div class="sold">SOLD</div>':''}</div>
+  <div class="body"><div class="cat">${esc(p.Category)}</div><h3>${esc(p.Name)}</h3>${p.Woods?`<div><span class="woods">${esc(p.Woods)}</span></div>`:''}<p class="desc">${esc(p.Description)}</p>
+  <div class="meta"><div><div class="price">${sold?'Sold':price}</div><div class="size">${esc(p.Size)}</div></div><a class="ask" href="#">${sold?'Make me one':'Ask about it'}</a></div></div></article>`}
+
+function render(){
+  const visible=rows.filter(p=>p.Name&&!/^hidden$/i.test(p.Status));
+  const cats=['All',...new Set(visible.map(p=>p.Category).filter(Boolean))];
+  if(!cats.includes(cat))cat='All';
+  document.getElementById('filters').innerHTML=cats.map(c=>`<button class="${c===cat?'on':''}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+  const list=visible.filter(p=>cat==='All'||p.Category===cat);
+  const feat=visible.filter(p=>/^(yes|y|true|x)$/i.test(p.Featured)&&!/^sold$/i.test(p.Status));
+  document.getElementById('featuredWrap').style.display=feat.length&&cat==='All'?'':'none';
+  document.getElementById('featured').innerHTML=feat.map(card).join('');
+  document.getElementById('grid').innerHTML=list.length?list.map(card).join(''):'<div class="state">Nothing here right now. Check back soon, or ask about a custom piece.</div>';
+}
+document.addEventListener('click',e=>{const b=e.target.closest('#filters button');if(b){cat=b.dataset.c;render()}});
+
+async function load(){
+  try{
+    const r=await fetch('https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:csv&headers=1&t='+Date.now());
+    if(!r.ok)throw new Error(r.status);
+    const t=await r.text(),data=parseCSV(t),head=data[0].map(h=>h.trim());
+    const sig=t;rows=data.slice(1).map(r=>Object.fromEntries(head.map((h,i)=>[h,(r[i]||'').trim()])));
+    if(sig!==lastSig){lastSig=sig;render()}
+    document.getElementById('loaded').textContent='Last checked '+new Date().toLocaleTimeString([], {hour:'numeric',minute:'2-digit',second:'2-digit'});
+  }catch(e){
+    document.getElementById('loaded').textContent='Could not reach the Sheet';
+    if(!rows.length)document.getElementById('grid').innerHTML='<div class="state">The shop is updating. Check back soon.</div>';
+  }
+}
+load();setInterval(load,15000);
+</script>
+</body>
+</html>
