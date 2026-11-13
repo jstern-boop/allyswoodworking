@@ -42,7 +42,7 @@
   .site-head{border-bottom:1px solid var(--line)}
   .site-head .wrap{display:flex;justify-content:space-between;align-items:center;gap:var(--s4) var(--s5);padding-top:var(--s5);padding-bottom:var(--s5);flex-wrap:wrap}
   .brand{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--walnut)}
-  .seal{width:46px;height:46px;border-radius:50%;border:2px solid var(--walnut);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:18px;flex:none}
+  .brand .logo{height:64px;width:auto;flex:none}
   .brand b{font-family:var(--serif);font-size:24px;letter-spacing:.3px;display:block;line-height:1.2}
   .brand small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
   .site-nav{display:flex;gap:var(--s1) var(--s5);flex-wrap:wrap}
@@ -181,6 +181,7 @@
     .site-foot .wrap{grid-template-columns:1fr}
     .btns .btn{flex:1 1 100%}
     .brand b{font-size:21px}
+    .brand .logo{height:52px}
   }
 </style>
 </head>
@@ -189,7 +190,7 @@
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="./" aria-label="Ally's Woodworking home"><span class="seal" aria-hidden="true">AW</span><span><b>Ally's Woodworking</b><small>Handmade in West Babylon, NY</small></span></a>
+    <a class="brand" href="./" aria-label="Ally's Woodworking home"><img class="logo" src="img/logo.webp" width="170" height="150" alt="" decoding="async"><span><b>Ally's Woodworking</b><small>Handmade in West Babylon, NY</small></span></a>
     <nav class="site-nav" aria-label="Main">
       <a href="./" aria-current="page">Home</a>
       <a href="../">Shop</a>
