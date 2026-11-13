@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ally's Woodworking | Handmade Cutting Boards, Trays &amp; Gifts · West Babylon, NY</title>
+<meta name="description" content="Handmade charcuterie boards, serving trays, wine racks, cornhole sets and custom gifts from a small woodworking shop in West Babylon, NY. Buy a piece or order one made for you.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ally's Woodworking: made by hand in West Babylon, NY">
+<meta property="og:description" content="Charcuterie boards, serving trays, wine racks, cornhole sets and custom gifts. Buy a piece or order one made for you.">
+<meta property="og:image" content="img/charcuterie.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/charcuterie.webp">
+<style>
+  /* Tokens: see DESIGN.md */
+  :root{
+    --maple:#f3e7d3;--maple-2:#e9d8bc;--paper:#fffaf2;--line:#dccbb0;
+    --walnut:#3b2a20;--walnut-2:#5a3e2b;--ink:#2a1f18;--soft:#6e5a4a;
+    --sapele:#8c4a2f;--purple:#6b3550;--sold:#8c2f2f;--ok:#2f6b45;
+    --serif:"Libre Caslon Text",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif;
+    --r-sm:4px;--r-md:6px;--shadow:0 10px 24px #3b2a2010;
+    --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
+    --wrap:1160px;--gutter:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+  body{font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--ink);background:var(--maple)}
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--sapele)}
+  :focus-visible{outline:3px solid var(--sapele);outline-offset:3px;border-radius:2px}
+  .skip{position:absolute;left:var(--s4);top:-60px;background:var(--walnut);color:var(--maple);padding:var(--s2) var(--s4);border-radius:var(--r-sm);z-index:10;text-decoration:none;font-weight:600}
+  .skip:focus{top:var(--s4)}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+  .ph{background:#fff2c4;border:1.5px dashed var(--sapele);color:var(--walnut);border-radius:var(--r-sm);padding:1px 6px;font-size:.92em;font-weight:600}
+  .ph::before{content:"Placeholder: ";font-weight:700;text-transform:uppercase;font-size:.78em;letter-spacing:.06em;color:var(--sapele)}
+
+  /* header */
+  .site-head{border-bottom:1px solid var(--line)}
+  .site-head .wrap{display:flex;justify-content:space-between;align-items:center;gap:var(--s4) var(--s5);padding-top:var(--s5);padding-bottom:var(--s5);flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:var(--s3);text-decoration:none;color:var(--walnut)}
+  .seal{width:46px;height:46px;border-radius:50%;border:2px solid var(--walnut);display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:18px;flex:none}
+  .brand b{font-family:var(--serif);font-size:24px;letter-spacing:.3px;display:block;line-height:1.2}
+  .brand small{display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+  .site-nav{display:flex;gap:var(--s1) var(--s5);flex-wrap:wrap}
+  .site-nav a{text-decoration:none;color:var(--soft);font-weight:600;font-size:15px;padding:10px 2px;min-height:44px;display:inline-flex;align-items:center}
+  .site-nav a[aria-current="page"]{color:var(--walnut);box-shadow:inset 0 -2px 0 var(--sapele)}
+  .site-nav a:hover{color:var(--walnut)}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:var(--r-sm);font:600 16px/1.2 var(--sans);text-decoration:none;cursor:pointer;border:1.5px solid var(--walnut)}
+  .btn-primary{background:var(--walnut);color:var(--maple)}
+  .btn-primary:hover{background:var(--walnut-2);border-color:var(--walnut-2)}
+  .btn-secondary{background:transparent;color:var(--walnut)}
+  .btn-secondary:hover{background:var(--maple-2)}
+  .btns{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s6)}
+
+  .eyebrow{font-size:12px;line-height:1.4;letter-spacing:.22em;text-transform:uppercase;color:var(--sapele);font-weight:700}
+  h1,h2,h3{font-family:var(--serif);color:var(--walnut);font-weight:700}
+  h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin-top:var(--s3)}
+  h2{font-size:clamp(28px,4vw,40px);line-height:1.15;margin-top:var(--s2)}
+  h3{font-size:22px;line-height:1.25}
+  .lead{font-size:20px;line-height:1.5;color:var(--soft);max-width:34ch;margin-top:var(--s5)}
+  section{padding:var(--s9) 0}
+  .section-head{max-width:62ch;margin-bottom:var(--s7)}
+  .section-head p{color:var(--soft);margin-top:var(--s3)}
+
+  /* hero */
+  .hero{padding:var(--s8) 0 var(--s9)}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:var(--s8);align-items:center}
+  .hero-photo{position:relative}
+  .hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-md);box-shadow:var(--shadow)}
+  .hero-photo figcaption{font-size:14px;color:var(--soft);margin-top:var(--s3);font-style:italic;font-family:var(--serif)}
+  .hero-note{margin-top:var(--s5);font-size:15px;color:var(--soft)}
+
+  /* end-grain divider (signature detail, once per page) */
+  .grain{height:18px;background:repeating-linear-gradient(90deg,#4a3324 0 22px,#d9b98c 22px 34px,var(--purple) 34px 40px,#c99c68 40px 58px,var(--walnut) 58px 74px)}
+
+  /* featured (live from the Google Sheet) */
+  .featured{background:var(--paper);border-bottom:1px solid var(--line)}
+  .feat-head{display:flex;justify-content:space-between;align-items:end;gap:var(--s5);flex-wrap:wrap;margin-bottom:var(--s7)}
+  .feat-head .section-head{margin-bottom:0}
+  .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s5)}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative}
+  .card .photo{aspect-ratio:4/3;background:var(--walnut-2)}
+  .card .photo img{width:100%;height:100%;object-fit:cover}
+  .card .body{padding:var(--s4) var(--s5) var(--s5);display:flex;flex-direction:column;gap:var(--s2);flex:1}
+  .card .cat{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--sapele);font-weight:700}
+  .card .price{font-family:var(--serif);font-size:22px;color:var(--walnut);margin-top:auto;padding-top:var(--s3);border-top:1px dashed var(--line);display:flex;justify-content:space-between;align-items:center}
+  .card .price a{font:600 14px var(--sans);color:var(--sapele)}
+  .card.sold .photo img{filter:grayscale(.6) brightness(.85)}
+  .ribbon{position:absolute;top:16px;left:-36px;transform:rotate(-35deg);background:var(--sold);color:#fff;font-weight:700;font-size:13px;letter-spacing:.15em;padding:6px 44px}
+  .state{padding:var(--s6);text-align:center;color:var(--soft);border:1px dashed var(--line);border-radius:var(--r-md);grid-column:1/-1}
+  .live{font-size:13px;color:var(--soft);margin-top:var(--s4)}
+
+  /* how buying works */
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s7);counter-reset:s}
+  .steps li{counter-increment:s;border-top:2px solid var(--walnut);padding-top:var(--s5)}
+  .steps li::before{content:counter(s);font-family:var(--serif);font-size:40px;line-height:1;color:var(--sapele);display:block;margin-bottom:var(--s3)}
+  .steps p{color:var(--soft);margin-top:var(--s2)}
+
+  /* custom orders */
+  .custom{background:var(--maple-2)}
+  .custom .wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--s8);align-items:start}
+  .examples{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);margin-top:var(--s6)}
+  .examples figure{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+  .examples img{aspect-ratio:1/1;object-fit:cover;width:100%}
+  .examples figcaption{padding:var(--s3) var(--s4);font-size:15px;color:var(--walnut);font-weight:600}
+  .form-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);padding:var(--s6);box-shadow:var(--shadow)}
+  .form-card h3{margin-bottom:var(--s2)}
+  .form-card > p{color:var(--soft);font-size:15px;margin-bottom:var(--s5)}
+  form .row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:var(--s4)}
+  label{font-weight:600;font-size:15px;color:var(--walnut)}
+  label .opt{font-weight:400;color:var(--soft)}
+  input,textarea,select{font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:var(--r-sm);padding:11px 12px;min-height:48px;width:100%}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--sapele);box-shadow:0 0 0 3px #8c4a2f33}
+  input[aria-invalid="true"],textarea[aria-invalid="true"]{border-color:var(--sold)}
+  .err{color:var(--sold);font-size:14px;font-weight:600;display:none}
+  .field.bad .err{display:block}
+  .form-note{font-size:14px;color:var(--soft);margin-top:var(--s3)}
+  .sent{display:none;border-left:4px solid var(--ok);background:#eef6f0;color:var(--ok);padding:var(--s4) var(--s5);border-radius:var(--r-sm);font-weight:600}
+
+  /* maker */
+  .maker .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:var(--s8);align-items:center}
+  .maker-photo{aspect-ratio:4/5;border-radius:var(--r-md);background:var(--maple-2);border:1.5px dashed var(--sapele);display:grid;place-items:center;text-align:center;padding:var(--s6);color:var(--walnut)}
+  .maker p{color:var(--soft);margin-top:var(--s4);max-width:58ch}
+
+  /* reviews */
+  .reviews{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .quotes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s5)}
+  .quote{border:1.5px dashed var(--sapele);border-radius:var(--r-md);padding:var(--s6);background:#fff8e6}
+  .quote blockquote{font-family:var(--serif);font-size:20px;line-height:1.45;color:var(--walnut)}
+  .quote cite{display:block;margin-top:var(--s4);font-style:normal;color:var(--soft);font-size:15px}
+
+  /* faq */
+  .faq .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--s8)}
+  details{border-bottom:1px solid var(--line);padding:var(--s4) 0}
+  summary{cursor:pointer;font-weight:600;color:var(--walnut);font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:var(--s4);min-height:44px;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:var(--serif);font-size:26px;color:var(--sapele);line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--soft);margin-top:var(--s2);max-width:60ch}
+
+  /* closing */
+  .closing{text-align:left}
+  .closing .wrap{display:flex;justify-content:space-between;align-items:center;gap:var(--s6);flex-wrap:wrap}
+  .closing .btns{margin-top:0}
+
+  /* footer */
+  .site-foot{background:var(--walnut);color:var(--maple);padding:var(--s8) 0 var(--s7)}
+  .site-foot .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:var(--s6)}
+  .site-foot h2{color:var(--maple);font-size:22px;margin:0 0 var(--s3)}
+  .site-foot p,.site-foot li{color:#e9dcc6;font-size:15px}
+  .site-foot ul{list-style:none}
+  .site-foot a{color:var(--maple)}
+  .site-foot .ph{background:#5a3e2b;color:#fff;border-color:#e9b98f}
+  .site-foot .ph::before{color:#ffd9b0}
+  .copy{grid-column:1/-1;border-top:1px solid #5a3e2b;padding-top:var(--s5);font-size:13px;color:#cdbb9f}
+
+  @media (max-width:900px){
+    .hero .wrap,.custom .wrap,.maker .wrap,.faq .wrap{grid-template-columns:1fr;gap:var(--s7)}
+    .hero-photo{max-width:520px}
+    .hero-photo img{aspect-ratio:4/3}
+    .grid{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr;gap:var(--s6)}
+    .site-foot .wrap{grid-template-columns:1fr 1fr}
+    .maker-photo{max-width:420px;aspect-ratio:4/3}
+  }
+  @media (max-width:600px){
+    :root{--gutter:16px}
+    body{font-size:16.5px}
+    section{padding:var(--s8) 0}
+    .hero{padding:var(--s6) 0 var(--s8)}
+    .grid,.quotes{grid-template-columns:1fr}
+    form .row{grid-template-columns:1fr;gap:0}
+    .form-card{padding:var(--s5)}
+    .site-foot .wrap{grid-template-columns:1fr}
+    .btns .btn{flex:1 1 100%}
+    .brand b{font-size:21px}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Ally's Woodworking home"><span class="seal" aria-hidden="true">AW</span><span><b>Ally's Woodworking</b><small>Handmade in West Babylon, NY</small></span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="./" aria-current="page">Home</a>
+      <a href="../">Shop</a>
+      <a href="#custom">Custom orders</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Handmade in West Babylon, NY</p>
+        <h1>Cutting boards, trays and gifts, made by hand in West Babylon.</h1>
+        <p class="lead">Buy a piece that's ready today, or have one made for you, with your initial, your colors, your size.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="../">Shop pieces for sale</a>
+          <a class="btn btn-secondary" href="#custom">Order a custom piece</a>
+        </div>
+        <p class="hero-note">Charcuterie boards · serving trays · wine racks · cornhole sets · humidors · engraved gifts</p>
+      </div>
+      <figure class="hero-photo">
+        <img src="img/charcuterie.webp" width="965" height="1263" alt="A striped oval charcuterie board with brass handles, set with cheese, salami, olives and grapes" fetchpriority="high">
+        <figcaption>A striped charcuterie board, ready for the table.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="grain" role="presentation"></div>
+
+  <section class="featured" aria-labelledby="feat-title">
+    <div class="wrap">
+      <div class="feat-head">
+        <div class="section-head">
+          <p class="eyebrow">In the shop now</p>
+          <h2 id="feat-title">Featured pieces</h2>
+          <p>One of a kind. When it's gone, it's gone, but we're always happy to make you another.</p>
+        </div>
+        <a class="btn btn-secondary" href="../">See the whole shop</a>
+      </div>
+      <div class="grid" id="featGrid" aria-live="polite">
+        <p class="state">Loading the pieces in the shop…</p>
+      </div>
+      <p class="live" id="liveNote" hidden>This list updates on its own from the shop's product sheet.</p>
+    </div>
+  </section>
+
+  <section class="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How buying works</p>
+        <h2 id="how-title">Three simple steps.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Pick a piece, or ask for one</h3><p>Choose something from the shop, or tell us what you'd like made. We'll answer any question about size, wood or care.</p></li>
+        <li><h3>Pay</h3><p>We accept <span class="ph">payment methods (e.g. cash, Venmo, Zelle)</span>. For custom orders, <span class="ph">deposit amount or "pay on pickup"</span>.</p></li>
+        <li><h3>Pick it up or get it delivered</h3><p><span class="ph">pickup in West Babylon / local delivery area / shipping</span></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="custom" id="custom" aria-labelledby="custom-title">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Custom orders</p>
+        <h2 id="custom-title">Have one made for you.</h2>
+        <p style="color:var(--soft);margin-top:12px;max-width:52ch">Wedding and housewarming gifts, a board with your family's initial, a cornhole set for your team. Here are a few things we've made for customers.</p>
+        <p style="color:var(--soft);margin-top:12px;max-width:52ch">Custom pieces usually take <span class="ph">lead time</span> and start at <span class="ph">starting price</span>.</p>
+        <div class="examples">
+          <figure><img src="img/monogram-tray.webp" width="1200" height="1200" loading="lazy" alt="A large letter H serving tray in dark wood with a light striped inlay"><figcaption>Monogram serving tray</figcaption></figure>
+          <figure><img src="img/cornhole.webp" width="1200" height="1200" loading="lazy" alt="A pair of cornhole boards finished as American flags, on grass"><figcaption>American flag cornhole set</figcaption></figure>
+          <figure><img src="img/humidor.webp" width="957" height="713" loading="lazy" alt="An open wooden cigar humidor with two trays full of cigars"><figcaption>Cigar humidor</figcaption></figure>
+          <figure><img src="img/heart.webp" width="1200" height="1200" loading="lazy" alt="A heart-shaped board engraved with a tree of life"><figcaption>Engraved tree of life heart</figcaption></figure>
+        </div>
+      </div>
+      <div class="form-card" id="request">
+        <h3>Tell us what you'd like</h3>
+        <p>We'll get back to you with ideas, a price and a date.</p>
+        <form id="customForm" novalidate>
+          <div class="row">
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required><span class="err" id="e-name">Please add your name.</span></div>
+            <div class="field"><label for="f-contact">Phone or email</label><input id="f-contact" name="contact" autocomplete="email" required><span class="err" id="e-contact">Add a phone number or email so we can reply.</span></div>
+          </div>
+          <div class="field"><label for="f-piece">What would you like?</label><select id="f-piece" name="piece"><option>Charcuterie or serving board</option><option>Serving tray (monogram or shaped)</option><option>Wine rack</option><option>Cornhole set</option><option>Humidor or cigar accessory</option><option>Engraved gift</option><option>Something else</option></select></div>
+          <div class="field"><label for="f-details">Details <span class="opt">(size, wood, initials, colors)</span></label><textarea id="f-details" name="details" rows="4" required></textarea><span class="err" id="e-details">Tell us a little about the piece.</span></div>
+          <div class="field"><label for="f-date">Needed by <span class="opt">(optional)</span></label><input id="f-date" name="date" type="date"></div>
+          <button class="btn btn-primary" type="submit">Send my request</button>
+          <p class="form-note">Preview only: this form isn't connected yet, so nothing is sent.</p>
+        </form>
+        <div class="sent" id="sent" role="status" tabindex="-1">Thanks! Your request is ready to send. (Preview: once the form is connected, it goes straight to Ally's Woodworking.)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="maker" aria-labelledby="maker-title">
+    <div class="wrap">
+      <div class="maker-photo"><span class="ph">photo of the maker in the shop</span></div>
+      <div>
+        <p class="eyebrow">Meet the maker</p>
+        <h2 id="maker-title">A family shop in West Babylon.</h2>
+        <p><span class="ph">2–3 sentences in Ally's words: who makes the pieces (Zaamil, with his daughter Bibi, if they're OK being named), how he started and what he loves to make</span></p>
+        <p>Every piece is cut, glued and finished by hand in our West Babylon shop, one at a time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="rev-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">From customers</p>
+        <h2 id="rev-title">What people say.</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote"><blockquote><span class="ph">a real customer review, with permission</span></blockquote><cite>Customer name, town</cite></figure>
+        <figure class="quote"><blockquote><span class="ph">a second real customer review</span></blockquote><cite>Customer name, town</cite></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-title">Good to know.</h2>
+      </div>
+      <div>
+        <details open><summary>How long does a custom order take?</summary><p><span class="ph">typical lead time, and how much notice to give before holidays</span></p></details>
+        <details><summary>Can I pick it up, or do you ship?</summary><p><span class="ph">pickup in West Babylon, local delivery area, shipping yes/no</span></p></details>
+        <details><summary>How do I pay?</summary><p><span class="ph">payment methods, and whether custom orders need a deposit</span></p></details>
+        <details><summary>How do I care for a wooden board?</summary><p><span class="ph">finish used (e.g. food-safe oil) and care tips: hand wash, dry, oil now and then</span></p></details>
+        <details><summary>Where can I see your work in person?</summary><p><span class="ph">craft fairs or markets, or "by appointment in West Babylon"</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" aria-labelledby="close-title">
+    <div class="wrap">
+      <h2 id="close-title">Find your piece, or have one made.</h2>
+      <div class="btns">
+        <a class="btn btn-primary" href="../">Shop pieces for sale</a>
+        <a class="btn btn-secondary" href="#custom">Order a custom piece</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Ally's Woodworking</h2>
+      <p>Handmade in West Babylon, NY.</p>
+      <p style="margin-top:8px"><a href="https://www.facebook.com/allys.woodworking" rel="noopener" target="_blank">Facebook</a></p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul><li><span class="ph">phone number</span></li><li style="margin-top:8px"><span class="ph">email, e.g. hello@allyswoodworking.com</span></li></ul>
+    </div>
+    <div>
+      <h2>Visit</h2>
+      <p><span class="ph">pickup / by appointment, and upcoming fairs</span></p>
+    </div>
+    <p class="copy">© 2026 Ally's Woodworking · Website by Island Pixel Studios</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Featured pieces, live from the same Google Sheet the shop uses
+  const SHEET_ID='1GtIs_KmIT7KahDWlA5FMHCi7_D6vvmEPM0FGtWPW_24';
+  const grid=document.getElementById('featGrid');
+  const esc=s=>String(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  function parseCSV(t){const rows=[];let r=[],f='',q=false;for(let i=0;i<t.length;i++){const c=t[i];if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}else if(c=='"')q=true;else if(c==','){r.push(f);f=''}else if(c=='\n'){r.push(f);rows.push(r);r=[];f=''}else if(c!='\r')f+=c}if(f||r.length){r.push(f);rows.push(r)}return rows}
+  function photoURL(u){u=(u||'').trim();const m=u.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:export=\w+&)?id=)([\w-]+)/);return m?'https://drive.google.com/thumbnail?id='+m[1]+'&sz=w1200':u}
+  function fallback(){grid.innerHTML='<p class="state">See everything that\'s for sale in <a href="../">the shop</a>.</p>'}
+  fetch('https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:csv&headers=1&t='+Date.now())
+   .then(r=>{if(!r.ok)throw 0;return r.text()})
+   .then(t=>{
+     const rows=parseCSV(t);const head=rows.shift().map(h=>h.trim().toLowerCase());
+     const items=rows.map(r=>Object.fromEntries(head.map((h,i)=>[h,(r[i]||'').trim()]))).filter(p=>p.name);
+     const vis=items.filter(p=>!/^hidden$/i.test(p.status));
+     let feat=vis.filter(p=>/^(yes|y|true|x)$/i.test(p.featured)&&!/^sold$/i.test(p.status));
+     if(feat.length<3)feat=feat.concat(vis.filter(p=>!feat.includes(p)&&!/^sold$/i.test(p.status)));
+     feat=feat.slice(0,3);
+     if(!feat.length)return fallback();
+     grid.innerHTML=feat.map(p=>{const price=/^\d+(\.\d+)?$/.test(p.price)?'$'+p.price:esc(p.price||'Ask for price');const img=photoURL(p.photo);
+       return `<article class="card"><div class="photo">${img?`<img src="${esc(img)}" alt="${esc(p.name)}" loading="lazy" referrerpolicy="no-referrer">`:''}</div><div class="body"><span class="cat">${esc(p.category)}</span><h3>${esc(p.name)}</h3><div class="price"><span>${price}</span><a href="../">View in shop</a></div></div></article>`}).join('');
+     document.getElementById('liveNote').hidden=false;
+   }).catch(fallback);
+
+  // Custom order form (preview: validates, does not send)
+  const form=document.getElementById('customForm');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();let first=null;
+    [['f-name','e-name'],['f-contact','e-contact'],['f-details','e-details']].forEach(([id,err])=>{
+      const el=document.getElementById(id),bad=!el.value.trim();
+      el.closest('.field').classList.toggle('bad',bad);el.setAttribute('aria-invalid',bad);
+      if(bad){el.setAttribute('aria-describedby',err);if(!first)first=el}else el.removeAttribute('aria-describedby');
+    });
+    if(first){first.focus();return}
+    form.style.display='none';const s=document.getElementById('sent');s.style.display='block';s.focus();
+  });
+})();
+</script>
+</body>
+</html>
